@@ -1,0 +1,10 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/styles.css" />
+
+<h2>Submit Testimonial</h2>
+<form method="POST" action="/submit">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Submit</button>
+</form>
+<% if (error) { %><p style="color:red;"><%= error %></p><% } %>

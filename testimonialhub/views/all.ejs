@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/styles.css" />
+
+<%- include('partials/header') %>
+<h2>All Testimonials</h2>
+<ul>
+  <% testimonials.forEach(t => { %>
+    <li>
+      <strong><%= t.name %></strong>: <%= t.message %><br>
+      <a href="/testimonial/<%= t._id %>">View Public Link</a>
+    </li>
+  <% }) %>
+</ul>
